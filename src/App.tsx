@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import ReduxFC from "./pages/ReduxFC";
 import ReduxClass from "./pages/ReduxClass";
 import ReduxUserList from "./pages/ReduxUserList";
+import HOC from "./pages/HOC";
 
 class App extends Component<INonProps, any> {
 
@@ -23,6 +24,9 @@ class App extends Component<INonProps, any> {
                       <li>
                           <Link to={"/redux/userList"}>redux/userList</Link>
                       </li>
+                      <li>
+                          <Link to={"/hoc"}>redux/hoc</Link>
+                      </li>
                   </ul>
                   <Switch>
                       <Route path={"/redux/fc"} >
@@ -33,6 +37,9 @@ class App extends Component<INonProps, any> {
                       </Route>
                       <Route path={"/redux/userList"} >
                           <ReduxUserList />
+                      </Route>
+                      <Route path={"/redux/hoc"} >
+                          <HOC />
                       </Route>
 
                   </Switch>
